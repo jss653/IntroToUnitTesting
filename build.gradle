@@ -5,19 +5,22 @@
 apply plugin: 'java'
 
 // Make sure we are using Java 8.
-if(JavaVersion.current() != JavaVersion.VERSION_1_8)
-    throw new GradleException("This project requires Java 8, but it's running on "+JavaVersion.current())
+//if(JavaVersion.current() != JavaVersion.VERSION_1_21)
+//    throw new GradleException("This project requires Java 8, but it's running on "+JavaVersion.current())
 
-sourceCompatibility = JavaVersion.VERSION_1_8
-targetCompatibility = JavaVersion.VERSION_1_8
+java {
+    sourceCompatibility = JavaVersion.VERSION_21
+    targetCompatibility = JavaVersion.VERSION_21
+}
 
 
 repositories {
-    jcenter()
+    mavenCentral()
 }
 
 dependencies {
-    // Use JUnit test framework
-    testImplementation 'junit:junit:4.12'
-}
+    // Use JUnit test framework junit4-4.13.2.jar
+    testImplementation 'junit:junit:4.13'
 
+    implementation files('build/classes/java/main')
+}

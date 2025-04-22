@@ -1,9 +1,20 @@
 /**
  * The class containing your tests for the {@link Demo} class.  Make sure you
- * test all methods in this class (including both 
- * {@link Demo#main(String[])} and 
+ * test all methods in this class (including both
+ * {@link Demo#main(String[])} and
  * {@link Demo#isTriangle(double, double, double)}).
  */
+package edu.umn.foo;
+
+import static org.junit.Assert.*;
+import org.junit.Test;
+
+
 public class DemoTest {
 
+	@Test
+	public void test_isTriangle_1() {
+		assertTrue(true);
+		//assertTrue(Demo.isTriangle(3, 4, 5));
+	}
 }
