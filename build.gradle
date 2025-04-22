@@ -20,7 +20,13 @@ repositories {
 
 dependencies {
     // Use JUnit test framework junit4-4.13.2.jar
-    testImplementation 'junit:junit:4.13'
+    testImplementation("junit:junit:4.13.2")
+    //testImplementation 'junit:junit:4.13'
+}
 
-    implementation files('build/classes/java/main')
+sourceSets {
+    test {
+        compileClasspath += main.output
+        runtimeClasspath += main.output
+    }
 }

@@ -4,7 +4,7 @@
  * {@link Demo#main(String[])} and
  * {@link Demo#isTriangle(double, double, double)}).
  */
-package edu.umn.foo;
+package demo;
 
 import static org.junit.Assert.*;
 import org.junit.Test;
@@ -13,8 +13,8 @@ import org.junit.Test;
 public class DemoTest {
 
 	@Test
-	public void test_isTriangle_1() {
-		assertTrue(true);
-		//assertTrue(Demo.isTriangle(3, 4, 5));
+	public void test_is_Triangle_1() {
+		//assertTrue(true);
+		assertTrue(Demo.isTriangle(3, 4, 5));
 	}
 }
