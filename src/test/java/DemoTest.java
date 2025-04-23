@@ -11,6 +11,7 @@ import org.junit.Test;
 import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
 import java.io.PrintStream;
+/* You need to fill in the blanks */
 
 public class DemoTest {
 
@@ -19,74 +20,10 @@ public class DemoTest {
 		assertTrue(Demo.isTriangle(3, 4, 5));
 	}
 
-	@Test
-	public void test_is_Triangle_2() {
-		assertTrue(Demo.isTriangle(5, 12, 13));
-	}
-
-	@Test
-	public void test_is_Triangle_3() {
-		assertTrue(Demo.isTriangle(5, 12, 13));
-	}
-
-	@Test
-	public void test_is_Triangle_4() {
-		assertTrue(Demo.isTriangle(5, 12, 13));
-	}
-
-	@Test
-	public void test_is_Triangle_5() {
-		assertFalse(Demo.isTriangle(0, 0, 0));
-	}
-
-	@Test
-	public void test_is_Triangle_6() {
-		assertTrue(Demo.isTriangle(3, 3, 5));
-	}
 
    @Test
    public void mainTest1() {
 
-		ByteArrayInputStream in =
-			new ByteArrayInputStream("5\n12\n13\n".getBytes());
-
-		System.setIn(in);
-
-		ByteArrayOutputStream out = new ByteArrayOutputStream();
-
-		System.setOut(new PrintStream(out));
-
-		String[] args = {"5,12,13"};
-		Demo.main(args);
-
-		String consoleOutput = "Enter side 1: \n";
-		consoleOutput += "Enter side 2: \n";
-		consoleOutput += "Enter side 3: \n";
-		consoleOutput += "This is a triangle.\n";
-
-		assertEquals(consoleOutput, out.toString());
-   }
-   @Test
-   public void mainTest2() {
-
-		ByteArrayInputStream in =
-			new ByteArrayInputStream("0\n0\n0\n".getBytes());
-
-		System.setIn(in);
-
-		ByteArrayOutputStream out = new ByteArrayOutputStream();
-
-		System.setOut(new PrintStream(out));
-
-		String[] args = {"0,0,0"};
-		Demo.main(args);
-
-		String consoleOutput = "Enter side 1: \n";
-		consoleOutput += "Enter side 2: \n";
-		consoleOutput += "Enter side 3: \n";
-		consoleOutput += "This is not a triangle.\n";
-
-		assertEquals(consoleOutput, out.toString());
    }
 
 }
