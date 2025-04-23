@@ -41,6 +41,8 @@ To install eclipse, visit https://www.eclipse.org/downloads/ and download the in
 Known Issues
 ------------
 ### Java 9
+
+DO NOT! Repo updated to support more recent java,gradle and JUnit versions
 Currently, Java 9 is not supported for this project.  Please install Java 8 and update your `JAVA_HOME` environment variable to point to your Java 8 JDK.  Gradle will throw an exception if you try to use any other version of Java.
 
 Alternatively, if you intend to run everything from command-line and you have multiple versions of Java installed, you can execute `./gradlew build -Dorg.gradle.java=<PATH_TO_JAVA_HOME>` or the similar Windows command to avoid updating your `JAVA_HOME` variable.  Note, however, that `PATH_TO_JAVA_HOME` cannot include spaces in it, even if the path is quoted.
